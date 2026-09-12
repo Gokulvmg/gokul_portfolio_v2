@@ -12,6 +12,7 @@ import LeadershipDetail from './pages/LeadershipDetail'
 import EducationDetail from './pages/EducationDetail'
 import CertificatesPage from './pages/CertificatesPage'
 import GalleryPage from './pages/GalleryPage'
+import Admin from './pages/Admin'
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true)
@@ -38,6 +39,7 @@ export default function App() {
             <Route path="/education/:id" element={<EducationDetail />} />
             <Route path="/certificates" element={<CertificatesPage />} />
             <Route path="/gallery" element={<GalleryPage />} />
+            <Route path="/admin" element={<Admin />} />
           </Routes>
         </AnimatePresence>
       </div>

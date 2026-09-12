@@ -78,7 +78,10 @@ export default function Navbar() {
             })}
           </div>
 
-          <a href="/resume.pdf" download className="hidden lg:block btn-primary text-sm py-2 px-5">Download CV</a>
+          <div className="hidden lg:flex items-center gap-2">
+            <Link to="/admin" className="px-3 py-2 rounded-lg text-textSecondary hover:text-accent hover:bg-accent/10 transition-colors font-medium text-sm">Admin</Link>
+            <a href="/resume.pdf" download className="btn-primary text-sm py-2 px-5">Download CV</a>
+          </div>
 
           <button className="lg:hidden text-textPrimary p-2" onClick={() => setMenuOpen(!menuOpen)}>
             {menuOpen ? <HiX size={22} /> : <HiMenuAlt4 size={22} />}
@@ -104,6 +107,7 @@ export default function Navbar() {
                     </a>
                   )
                 })}
+                <Link to="/admin" onClick={() => setMenuOpen(false)} className="text-accent py-2.5 px-4 rounded-lg hover:bg-accent/5 transition-all font-medium">Admin workspace</Link>
                 <a href="/resume.pdf" download className="btn-primary text-center mt-3">Download CV</a>
               </div>
             </motion.div>
